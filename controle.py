@@ -9,7 +9,7 @@ class Adicionar:
         self.cera=cera
         self.secar=secar
         
-        self.pc_ducha=0
+        self.pc_ducha=self.receber_valor_ducha()
         self.pc_completa=0
         self.pc_alugar=0
         self.pc_aspirar=0
@@ -21,7 +21,7 @@ class Adicionar:
         self.pc_alugar=self.receber_valor_alugar()
         self.pc_aspirar=self.receber_valor_aspirar()
         self.pc_secar=self.receber_valor_secar()
-        self.pc_cera=0'''
+        self.pc_cera=self.receber_valor_cera()'''
         
         self.preco_servico=0
     def receber_valor_ducha(self):
@@ -90,6 +90,7 @@ class Adicionar:
 def inserir_carro():
     carro_lido = alpha.le_modelo.text()
     radio_button=0
+    preco=0
     ducha=False
     completa=False
     aspirar=False
@@ -113,25 +114,32 @@ def inserir_carro():
 #inserir mensagem de erro <<<<<<<<<<<<<<<<<<<
         print("Nada Selecionado")
         
-    if alpha.ck_ducha.isChecked()==True:
+    if alpha.ck_ducha.isChecked():
         ducha=True  
-    elif alpha.ck_completa.isChecked()==True:
+    if alpha.ck_completa.isChecked():
         completa=True
-    elif alpha.ck_aspirar.isChecked()==True:
+    if alpha.ck_aspirar.isChecked():
         aspirar=True
-    elif alpha.ck_alugar.isChecked()==True:
+    if alpha.ck_alugar.isChecked():
         alugar=True
-    elif alpha.ck_cera.isChecked()==True:
+    if alpha.ck_cera.isChecked():
         cera=True
-    elif alpha.ck_secar.isChecked()==True:
+    if alpha.ck_secar.isChecked():
         secar=True
+        
+    
     
     obj=Adicionar(radio_button, ducha, completa, secar, cera, aspirar, alugar)
 
-    preco=obj.receber_valor_ducha()+obj.receber_valor_secar()
+    #preco=obj.calcular_servicos()
     #preco=Adicionar.calcular_servicos()
-
-    print(preco)
+    print(f"ducha {ducha}")
+    print(f"completa {completa}")
+    print(f"aspirar {aspirar}")
+    print(f"alugar {alugar}")
+    print(f"secar {secar}")
+    print(f"cera {cera}")
+    print(obj.calcular_servicos())
     print(carro_lido)
     print(radio_button)
         
