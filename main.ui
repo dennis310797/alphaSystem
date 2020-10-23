@@ -211,7 +211,7 @@
         <item row="0" column="0">
          <widget class="QCheckBox" name="ck_completa">
           <property name="text">
-           <string>completa</string>
+           <string>Completa</string>
           </property>
          </widget>
         </item>
@@ -223,9 +223,9 @@
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QCheckBox" name="ck_aspirador">
+         <widget class="QCheckBox" name="ck_aspirar">
           <property name="text">
-           <string>Aspirador</string>
+           <string>Aspirar</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -253,7 +253,7 @@
          </widget>
         </item>
         <item row="1" column="2">
-         <widget class="QCheckBox" name="ck_aluguel">
+         <widget class="QCheckBox" name="ck_alugar">
           <property name="enabled">
            <bool>true</bool>
           </property>
